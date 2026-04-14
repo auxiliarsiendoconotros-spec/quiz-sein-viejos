@@ -184,7 +184,7 @@ async function guardarLead(lead, resultado) {
 
 function construirUrlWhatsapp(plan, version) {
   const emoji = EMOJIS_PLAN[plan] || "";
-  const msg = `Hola Sein, hice el quiz y mi plan es ${plan} ${version} ${emoji} AQUÍ_VA_EL_TEXTO_DEL_MENSAJE`;
+  const msg = `Hola Sein, hice el quiz y mi plan es ${plan} ${version} ${emoji} ¡Quiero mi plan personalizado!`;
   return `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
 }
 
@@ -338,7 +338,7 @@ function ResultScreen({ resultado, nombre, onRestart }) {
         </div>
         <div style={{ ...ss(5), textAlign: "center" }}>
           <p style={{ fontFamily: FONT_DISPLAY, fontSize: 20, color: INK, fontStyle: "italic", marginBottom: 28, lineHeight: 1.6, fontWeight: 400, ...NO_LIG }}>{r.cta}</p>
-          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" style={{ fontFamily: FONT_BODY, fontSize: 15, fontWeight: 600, letterSpacing: 1, padding: "18px 0", border: "none", borderRadius: 100, background: r.color, color: "#fff", cursor: "pointer", transition: "all .3s ease", display: "block", width: "100%", maxWidth: 340, margin: "0 auto 14px", textDecoration: "none", boxShadow: `0 6px 18px ${r.color}35` }} onMouseOver={(e) => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = `0 10px 26px ${r.color}50`; }} onMouseOut={(e) => { e.currentTarget.style.transform = "none"; e.currentTarget.style.boxShadow = `0 6px 18px ${r.color}35`; }}>AQUÍ_VA_EL_NOMBRE_DEL_BOTÓN</a>
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" style={{ fontFamily: FONT_BODY, fontSize: 15, fontWeight: 600, letterSpacing: 1, padding: "18px 0", border: "none", borderRadius: 100, background: r.color, color: "#fff", cursor: "pointer", transition: "all .3s ease", display: "block", width: "100%", maxWidth: 340, margin: "0 auto 14px", textDecoration: "none", boxShadow: `0 6px 18px ${r.color}35` }} onMouseOver={(e) => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = `0 10px 26px ${r.color}50`; }} onMouseOut={(e) => { e.currentTarget.style.transform = "none"; e.currentTarget.style.boxShadow = `0 6px 18px ${r.color}35`; }}>QUIERO MI PLAN PERSONALIZADO</a>
           <button onClick={onRestart} style={{ fontFamily: FONT_BODY, fontSize: 13, color: INK_MUTED, background: "none", border: "none", cursor: "pointer", padding: 10, marginTop: 6, fontWeight: 500 }}>Volver a empezar</button>
         </div>
         {showDebug && (
